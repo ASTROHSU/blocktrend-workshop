@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>活動資訊 | 企業 Web3 實戰工作坊</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <style>
-        body { font-family: 'Noto Sans TC', sans-serif; }
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
     </style>
 </head>
+
 <body class="bg-slate-50 text-slate-800 min-h-screen">
     <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+        <!-- 導覽列 -->
+        <nav
+            class="flex flex-wrap justify-center gap-4 md:gap-8 mb-8 pb-6 border-b border-slate-200 font-bold text-sm md:text-base">
+            <a href="index.html" class="text-slate-500 hover:text-amber-600 transition-colors">🏠 工作坊首頁</a>
+            <a href="info.html" class="text-amber-600">ℹ️ 活動資訊</a>
+            <a href="slides.html" class="text-slate-500 hover:text-amber-600 transition-colors">📽️ 課堂投影片</a>
+            <a href="pre-workshop-email.md" class="text-slate-500 hover:text-amber-600 transition-colors">📧 課前通知信</a>
+        </nav>
         <!-- 標題 -->
         <header class="text-center mb-12">
-            <span class="inline-block bg-amber-100 text-amber-800 py-2 px-4 rounded-full text-sm font-bold tracking-wide uppercase mb-4">Workshop Info</span>
+            <span
+                class="inline-block bg-amber-100 text-amber-800 py-2 px-4 rounded-full text-sm font-bold tracking-wide uppercase mb-4">Workshop
+                Info</span>
             <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-2">活動資訊</h1>
-            <p class="text-lg text-slate-500">企業 Web3 實戰工作坊 · 區塊勢 × Dinngo</p>
+            <p class="text-lg text-slate-500">企業 Web3 實戰工作坊</p>
         </header>
 
         <!-- 場地與 Wi-Fi（置頂，避免忘記） -->
         <div class="grid md:grid-cols-2 gap-4 mb-6">
             <section class="bg-amber-50/70 rounded-xl border border-amber-200 p-4">
                 <h3 class="text-sm font-bold text-slate-600 mb-2 flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
                     場地
                 </h3>
                 <p class="font-bold text-slate-800 text-sm">集思台大會議中心 · 尼采廳（B1）</p>
             </section>
             <section class="bg-slate-50 rounded-xl border border-slate-200 p-4">
                 <h3 class="text-sm font-bold text-slate-600 mb-2 flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                        <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                        <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                        <circle cx="12" cy="20" r="1" />
+                    </svg>
                     Wi-Fi
                 </h3>
                 <p class="text-slate-800 text-sm font-mono">請向工作人員索取</p>
@@ -41,7 +66,11 @@
         <!-- 時間表 -->
         <section class="bg-white rounded-2xl shadow-lg border-2 border-amber-200 p-6 md:p-10 mb-6">
             <h2 class="flex items-center gap-3 text-2xl font-bold text-slate-800 mb-6 border-l-4 border-amber-500 pl-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                </svg>
                 時間表
             </h2>
             <div class="space-y-4">
@@ -112,16 +141,28 @@
         <!-- 場地示意圖 -->
         <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8 mb-6">
             <h2 class="flex items-center gap-3 text-xl font-bold text-slate-800 mb-4 border-l-4 border-amber-500 pl-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
                 場地示意圖
             </h2>
-            <img src="https://duk.tw/WQzLj0.png" alt="集思台大會議中心尼采廳平面圖" class="w-full max-w-2xl rounded-lg shadow-md border border-slate-200">
+            <img src="https://duk.tw/WQzLj0.png" alt="集思台大會議中心尼采廳平面圖"
+                class="w-full max-w-2xl rounded-lg shadow-md border border-slate-200">
         </section>
 
         <!-- 午餐與附近餐飲 -->
         <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8 mb-6">
             <h2 class="flex items-center gap-3 text-xl font-bold text-slate-800 mb-4 border-l-4 border-amber-500 pl-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" x2="6" y1="1" y2="4"/><line x1="10" x2="10" y1="1" y2="4"/><line x1="14" x2="14" y1="1" y2="4"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="2">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                    <line x1="6" x2="6" y1="1" y2="4" />
+                    <line x1="10" x2="10" y1="1" y2="4" />
+                    <line x1="14" x2="14" y1="1" y2="4" />
+                </svg>
                 午餐與附近餐飲
             </h2>
             <div class="space-y-4">
@@ -147,7 +188,10 @@
         <!-- 我們提供的服務 -->
         <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8 mb-6">
             <h2 class="flex items-center gap-3 text-xl font-bold text-slate-800 mb-4 border-l-4 border-amber-500 pl-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
                 我們提供的服務
             </h2>
             <ul class="space-y-3">
@@ -176,14 +220,16 @@
 
         <!-- 連結到投影片 -->
         <div class="text-center mt-8">
-            <a href="index.html" class="inline-flex items-center gap-2 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-full shadow-lg transition-all hover:scale-105">
+            <a href="slides.html"
+                class="inline-flex items-center gap-2 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-full shadow-lg transition-all hover:scale-105">
                 進入課程投影片 →
             </a>
         </div>
 
         <footer class="text-center mt-12 text-slate-400 text-sm">
-            區塊勢 × Dinngo | blocktrend.today
+            區塊勢 | blocktrend.today
         </footer>
     </div>
 </body>
+
 </html>
