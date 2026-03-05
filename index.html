@@ -1441,28 +1441,28 @@
                                     </div>
                                 )}
                                 {slide.id === 76 && (
-                                    <div className="mt-8 flex flex-col items-center gap-6">
-                                        <div className="bg-white rounded-3xl border-2 border-slate-200 shadow-lg p-6 md:p-8 flex flex-col items-center gap-4">
+                                    <div className="mt-4 flex flex-col items-center gap-3 flex-shrink min-h-0 max-w-full">
+                                        <div className="bg-white rounded-2xl border-2 border-slate-200 shadow-lg p-4 md:p-5 flex flex-col items-center gap-3 max-w-full">
                                             <img
-                                                src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=https%3A%2F%2Fline.me%2Fti%2Fg2%2F9CVfDhKHaMvWo_0XVNeVtNGkla-dzCs_KkLj9w%3Futm_source%3Dinvitation%26utm_medium%3Dlink_copy%26utm_campaign%3Ddefault"
+                                                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fline.me%2Fti%2Fg2%2F9CVfDhKHaMvWo_0XVNeVtNGkla-dzCs_KkLj9w%3Futm_source%3Dinvitation%26utm_medium%3Dlink_copy%26utm_campaign%3Ddefault"
                                                 alt="加入課後 LINE 群組 QR Code"
-                                                className="w-[220px] h-[220px] md:w-[260px] md:h-[260px] rounded-2xl bg-white"
+                                                className="w-[160px] h-[160px] md:w-[200px] md:h-[200px] rounded-xl bg-white flex-shrink-0"
                                             />
-                                            <p className="text-base md:text-lg text-slate-600 font-medium max-w-xl">
+                                            <p className="text-sm md:text-base text-slate-600 font-medium max-w-md text-center">
                                                 掃描 QR Code 加入「企業 Web3 實戰工作坊」課後一個月 LINE 群組，一起交流後續問題與實作心得。
                                             </p>
                                             <a
                                                 href="https://line.me/ti/g2/9CVfDhKHaMvWo_0XVNeVtNGkla-dzCs_KkLj9w?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg md:text-xl rounded-full shadow-md transition-all hover:scale-105"
+                                                className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base md:text-lg rounded-full shadow-md transition-all hover:scale-105 flex-shrink-0"
                                             >
                                                 直接點這裡加入群組
                                             </a>
                                         </div>
                                     </div>
                                 )}
-                                {slide.footer && <p className="mt-12 text-lg md:text-xl text-slate-400 font-medium">{slide.footer}</p>}
+                                {slide.footer && <p className={slide.id === 76 ? "mt-6 text-base md:text-lg text-slate-400 font-medium" : "mt-12 text-lg md:text-xl text-slate-400 font-medium"}>{slide.footer}</p>}
                             </div>
                         );
                     case 'split':
