@@ -45,13 +45,13 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12mm;
+      grid-template-columns: 1fr;
+      gap: 8mm;
     }
     .name-tag {
-      aspect-ratio: 85/54;
-      min-height: 54mm;
-      padding: 6mm 8mm;
+      width: 100%;
+      height: 125mm;
+      padding: 8mm 10mm;
       background-color: #fff;
       border: 1.2px solid #333;
       border-radius: 3px;
@@ -69,29 +69,29 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 3px;
+      height: 4px;
       background: #333;
     }
     .name-tag .workshop-label {
       position: absolute;
-      bottom: 3mm;
+      bottom: 4mm;
       left: 0;
       right: 0;
-      font-size: 0.6rem;
+      font-size: 0.75rem;
       font-weight: 500;
       color: #555;
       letter-spacing: 0.12em;
     }
     .name-tag .name {
-      font-size: 2.05rem;
+      font-size: 3rem;
       font-weight: 700;
       color: #000;
       letter-spacing: 0.02em;
-      margin-bottom: 1.5mm;
+      margin-bottom: 2mm;
       line-height: 1.25;
     }
     .name-tag .company {
-      font-size: 0.8rem;
+      font-size: 1rem;
       font-weight: 500;
       color: #444;
       letter-spacing: 0.04em;
@@ -111,7 +111,7 @@
 <body>
   <p class="save-pdf-hint">若要傳給夥伴列印：按 Cmd＋P（Mac）或 Ctrl＋P（Windows）→ 目的地選「另存為 PDF」</p>
   <div class="page">
-    <p class="print-hint">企業 Web3 工作坊 · 活動名牌（列印後沿邊線剪下，可對摺立於桌上或黏貼使用）</p>
+    <p class="print-hint">企業 Web3 工作坊 · 活動名牌（每張 A4 兩枚，列印後沿邊線剪下即可使用，可對摺立於桌上或黏貼）</p>
     <div class="grid">
       <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">高茂鈞</span><span class="company">聯合報</span></div>
       <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">范振揮</span><span class="company">聯合報</span></div>
