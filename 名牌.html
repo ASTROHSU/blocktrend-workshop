@@ -51,15 +51,11 @@
     .name-tag {
       width: 100%;
       height: 125mm;
-      padding: 8mm 10mm;
       background-color: #fff;
       border: 1.2px solid #333;
       border-radius: 3px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
       position: relative;
       overflow: hidden;
     }
@@ -71,16 +67,22 @@
       right: 0;
       height: 4px;
       background: #333;
+      z-index: 1;
     }
-    .name-tag .workshop-label {
-      position: absolute;
-      bottom: 4mm;
-      left: 0;
-      right: 0;
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: #555;
-      letter-spacing: 0.12em;
+    .name-tag-top {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 6mm 10mm 4mm;
+    }
+    .name-tag-top .fold-hint {
+      font-size: 0.7rem;
+      color: #888;
+      margin-top: 2mm;
     }
     .name-tag .name {
       font-size: 4.25rem;
@@ -99,6 +101,33 @@
     .name-tag .company.empty {
       display: none;
     }
+    .name-tag .fold-line {
+      flex: 0 0 0;
+      border-top: 1px dashed #999;
+      margin: 0 6mm;
+    }
+    .name-tag-bottom {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4mm 10mm 6mm;
+      transform: rotate(180deg);
+    }
+    .name-tag-bottom .workshop-label {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #555;
+      letter-spacing: 0.12em;
+    }
+    .name-tag-bottom .fold-hint {
+      font-size: 0.7rem;
+      color: #888;
+      margin-bottom: 2mm;
+    }
     .print-hint {
       font-size: 0.85rem;
       font-weight: 500;
@@ -111,29 +140,260 @@
 <body>
   <p class="save-pdf-hint">若要傳給夥伴列印：按 Cmd＋P（Mac）或 Ctrl＋P（Windows）→ 目的地選「另存為 PDF」</p>
   <div class="page">
-    <p class="print-hint">企業 Web3 工作坊 · 活動名牌（每張 A4 兩枚，列印後沿邊線剪下即可使用，可對摺立於桌上或黏貼）</p>
+    <p class="print-hint">企業 Web3 工作坊 · 活動立牌（每張 A4 兩枚，列印後沿邊線剪下，沿虛線對摺即可立於桌上）</p>
     <div class="grid">
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">高茂鈞</span><span class="company">聯合報</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">范振揮</span><span class="company">聯合報</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">Mindy Ho</span><span class="company">台灣大哥大</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">裴高正</span><span class="company">金管會</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">郭育齊</span><span class="company">金管會</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">鄧秋明</span><span class="company">三商電腦</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">林岳平</span><span class="company">三商電腦</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">黃玲瑛</span><span class="company">三商電腦</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">陳怡君</span><span class="company">三商電腦</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">周宜屏</span><span class="company">三商電腦</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">李佳琳</span><span class="company">三商電腦</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">劉玉惠</span><span class="company">三商電腦</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">洪靖雯</span><span class="company">三商電腦</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">周世達</span><span class="company">三商電腦</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">林家宏</span><span class="company">三商電腦</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">陳依瑤</span><span class="company">三商電腦</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">Shieh Ron</span><span class="company">車麻吉</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">John Wu</span><span class="company">鑒真數位</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">謝盛宇</span><span class="company empty"></span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">joey.su</span><span class="company">國泰金控</span></div>
-      <div class="name-tag"><span class="workshop-label">企業 Web3 工作坊</span><span class="name">hsinteng</span><span class="company">國泰金控</span></div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">高茂鈞</span>
+          <span class="company">聯合報</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">范振揮</span>
+          <span class="company">聯合報</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">Mindy Ho</span>
+          <span class="company">台灣大哥大</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">裴高正</span>
+          <span class="company">金管會</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">郭育齊</span>
+          <span class="company">金管會</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">鄧秋明</span>
+          <span class="company">三商電腦</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">林岳平</span>
+          <span class="company">三商電腦</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">黃玲瑛</span>
+          <span class="company">三商電腦</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">陳怡君</span>
+          <span class="company">三商電腦</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">周宜屏</span>
+          <span class="company">三商電腦</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">李佳琳</span>
+          <span class="company">三商電腦</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">劉玉惠</span>
+          <span class="company">三商電腦</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">洪靖雯</span>
+          <span class="company">三商電腦</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">周世達</span>
+          <span class="company">三商電腦</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">林家宏</span>
+          <span class="company">三商電腦</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">陳依瑤</span>
+          <span class="company">三商電腦</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">Shieh Ron</span>
+          <span class="company">車麻吉</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">John Wu</span>
+          <span class="company">鑒真數位</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">謝盛宇</span>
+          <span class="company empty"></span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">joey.su</span>
+          <span class="company">國泰金控</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
+      <div class="name-tag">
+        <div class="name-tag-top">
+          <span class="name">hsinteng</span>
+          <span class="company">國泰金控</span>
+          <span class="fold-hint">↓ 沿虛線對摺</span>
+        </div>
+        <div class="fold-line"></div>
+        <div class="name-tag-bottom">
+          <span class="fold-hint">↑</span>
+          <span class="workshop-label">企業 Web3 工作坊</span>
+        </div>
+      </div>
     </div>
   </div>
 </body>
